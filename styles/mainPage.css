@@ -72,17 +72,26 @@
 }
 
 .hotel-name {
+    font-family:Lucida Handwriting ;
     margin-top: 35px;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: 5px;
     margin-bottom: 10px;
+}
+
+.hotel-name h1 {
+    font-size: 50px;
 }
 
 .menu-title {
     font-weight: 600;
     font-size: 22px;
     letter-spacing: 5px;
+}
+
+.menu-title h3 {
+    font-size: 25px;
 }
 
 /*
@@ -339,6 +348,15 @@ nav {
 
 .go-link a:hover {
     color: #e2e2e2;
+}
+
+.footer {
+    height: 300px;
+    background-color: rgb(245, 222, 179,0.8);
+    border-radius: 25px 25px 0 0;
+    color: white;
+    font-size: 80px;
+    text-align: center;
 }
 
 @media screen and (max-width: 925px) {
