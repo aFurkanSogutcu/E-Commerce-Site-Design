@@ -22,45 +22,4 @@
         <button id="submit" type="submit">Register</button>
     </form>
 </body>
-
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-    import { getDatabase, ref, set, push, child } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyCOBL1cIRsB8nVyd95ViAMdt8hx58iKv9A",
-      authDomain: "iot-deneme3.firebaseapp.com",
-      projectId: "iot-deneme3",
-      storageBucket: "iot-deneme3.appspot.com",
-      messagingSenderId: "177571169203",
-      appId: "1:177571169203:web:e55df40a1fa814672c81c6",
-      measurementId: "G-14R7RMY492"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-
-    var btn = document.getElementById('submit');
-
-    btn.addEventListener('click', (e) => {
-
-        const userId = push(child(ref(database), 'users')).key;
-
-        set(ref(database, 'users/' + userId), {
-        username: document.getElementById('nameSurname').value,
-        email: document.getElementById('email').value
-        }).then(() => {
-            alert("data updated:");
-        }).catch((error) => {
-            alert(error);
-        });
-    });
-  </script>
-
 </html>

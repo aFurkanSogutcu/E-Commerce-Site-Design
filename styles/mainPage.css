@@ -1,9 +1,13 @@
 *, *::before, *::after {
     padding: 0;
     margin: 0;  
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
+hr {
+    height: 1px;
+    border-color: rgb(207, 124, 124);
+}
 /*
     ------------------------------------------------
 */
@@ -11,7 +15,7 @@
 .frame {
     grid-template-columns: repeat(auto-fit, minmax (350px, 1fr));
     font-family: cursive;
-    background: rgba(0,0,0,0.4)url(/img/mainPageBG3.jpg);
+    background: rgba(0,0,0,0.4) url("../img/mainPageBG3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -115,12 +119,10 @@
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
-    height: 100%;
 }
 
 body {
     overflow-x: hidden;
-    height: 100%;
 }
 
 .navbar-frame {
@@ -130,11 +132,12 @@ body {
 }
 
 .navbar {
-    display: flex;
+    
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1.5rem;
+
     justify-content: space-between;
     align-items: center;
     background-color: white;
@@ -155,20 +158,19 @@ body {
     color: rgb(161, 132, 68);
     font-size: 4rem;
     position: absolute;
-    top: 100%;
+    top: 50%;
     right: 2rem;
-    transform: translateY(-78%);
+    transform: translateY(-50%);
     cursor: pointer;
-    z-index: 500;
+    z-index: 1500;
     display: none;
 }
 
 nav {
-    justify-content: center;
-    display: flex;
+    display:flex;
     align-items: center;
     width: 100%;
-    height: 2rem;
+    height: 3rem;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
@@ -199,10 +201,11 @@ nav {
 .nav-list-ul {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .nav-list li {
-    line-height: 2rem;
+    line-height: 8rem;
     position: relative;
 }
 
@@ -224,9 +227,6 @@ nav {
     color: #eb3007;
 }
 
-.nav-list i {
-    display:none;
-}
 
 .sub-menu {
     width: 20rem;
@@ -235,10 +235,10 @@ nav {
     border-top: 3px solid #eb3007;
     background-color: #191919;
     z-index: 100;
-    top: 250%; 
+    top: 16rem;
+    transition: all 750ms ease-out; 
     opacity: 0;
     visibility: hidden;
-    transition: all 750ms ease-out;
 }
 
 .sub-menu::before {
@@ -265,7 +265,7 @@ nav {
 }
 
 .nav-list li:hover > .sub-menu {
-    top: 4rem;
+    top: 8rem;
     opacity: 1;
     visibility:visible;
 }
@@ -276,8 +276,10 @@ nav {
 }
 
 .sepet {
+    width: 130px;
+    height: 40px;
     color: rgb(161, 132, 68);
-    font-size: 4rem;
+    font-size: 2.5rem;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -285,14 +287,8 @@ nav {
     z-index: 1000;
     background-color: wheat;
     border-radius: 10px;
+    text-align: center;
 }
-
-
-
-
-/*
-    ------------------------------------------------
-*/
 
 .menu {
     padding: 35px, 45px, 35px, 45px;
@@ -447,13 +443,11 @@ nav {
 
 @media screen and (max-width: 925px) {
 
-/* ----- navbar ----- */
-
     nav {
         justify-content: start;
     }
 
-    .nav-list{
+    .nav-list-ul{
         position: fixed;
         top: 0;
         left: 0;
@@ -463,10 +457,10 @@ nav {
         align-items: initial;
         background-color: #191919;
         z-index: 1000;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
 
-    .nav-list li {
+    .nav-list>li {
         line-height: 6rem;
     }
 
@@ -482,7 +476,7 @@ nav {
         display: none;
     }
 
-    .nav-list li:hover .sub-menu {
+    .nav-list-ul li:hover > .sub-menu {
         opacity: 1;
         visibility: visible;
         max-height: initial;
@@ -492,26 +486,22 @@ nav {
         display: block;
     }
 
-    .basket {
-    }
-
-    .close {
+    .ion-md-backspace {
         display: none;
     }
 
-    nav.active .close {
+    nav.active .ion-md-backspace {
         display: block;
     }
 
-    nav.active .open-menu {
+    nav.active .ion-md-menu {
         display: none;
     } 
 
-    nav.active .nav-list {
+    nav.active .nav-list-ul {
         display: flex;
     }
 
-/* ----- içerik ----- */
 
     .menu {
         flex-wrap: wrap;
@@ -524,27 +514,36 @@ nav {
 
 @media screen and (max-width: 700px) {
     
-/* ----- içerik ----- */    
+    /* ----- içerik ----- */    
+        
+        .category {
+            width: 75%;
+        }
     
-    .category {
-        width: 75%;
-    }
+        .top-items {
+            display:grid;
+            width: 17%;
+            height: 8.5%;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            background-color: rgb(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
 
-    .top-items {
-        display:grid;
-        width: 17%;
-        height: 7%;
-        right: 0;
-        top: 0;
-        z-index: 1000;
-        text-align: center;
-        background-color: rgb(255, 255, 255, 0.8);
-        border-radius: 5px;
+        .top-items a {
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: rgb(153, 138, 111);
+        }
+}
+
+@media screen and (max-width: 1250px) {
+    .sepet {
+        padding-top: 10px;
+        width: 100px;
+        height: 60px;
+        font-size: 2.3rem;
     }
-    
-    .top-items a {
-        font-size: 1.4rem;
-        text-decoration: none;
-        color: rgb(153, 138, 111);
-    }   
 }

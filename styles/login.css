@@ -9,9 +9,9 @@ body {
     background-position: center;
 }
 
-.loginBox {
+.box {
     width: 350px;
-    height: 340px;
+    height: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,29 +21,12 @@ body {
     border-radius: 20%;
 }
 
-.registerBox {
-    width: 350px;
-    height: 450px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    border-radius: 20%;
-}
-
-.loginBox h1 {
+.box h1 {
     color: #ffc400ec;
     font-weight: 700;
 } 
 
-.registerBox h1 {
-    color: #ffc400ec;
-    font-weight: 700;
-} 
-
-.input {
+#username, #password {
     border: 0;
     background: none;
     display: block;
@@ -58,7 +41,7 @@ body {
     transition: 0.25px;
 }
 
-.input:focus {
+#username:focus, #password:focus {
     width: 270px;
     border-color: #ffc400ec;
 }
