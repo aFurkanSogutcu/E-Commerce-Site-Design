@@ -2,16 +2,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: url(/img/loginBack2.jpg);
+    background: url(../img/loginBack2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
 
-.box {
+.loginBox {
     width: 350px;
-    height: 300px;
+    height: 340px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,12 +21,29 @@ body {
     border-radius: 20%;
 }
 
-.box h1 {
+.registerBox {
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-radius: 20%;
+}
+
+.loginBox h1 {
     color: #ffc400ec;
     font-weight: 700;
 } 
 
-#username, #password {
+.registerBox h1 {
+    color: #ffc400ec;
+    font-weight: 700;
+} 
+
+.input {
     border: 0;
     background: none;
     display: block;
@@ -41,7 +58,7 @@ body {
     transition: 0.25px;
 }
 
-#username:focus, #password:focus {
+.input:focus {
     width: 270px;
     border-color: #ffc400ec;
 }
