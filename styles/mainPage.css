@@ -236,10 +236,6 @@ nav {
     color: rgb(255, 255, 255);
 }
 
-.nav-list {
-    
-}
-
 .nav-list-ul {
     display: flex;
     width: 100%;
@@ -323,16 +319,16 @@ nav {
 */
 
 .sepet {
-    width: 130px;
+    width: 75px;
     height: 40px;
-    color: #D5B4B4;
+    color: #F5EBEB;
     font-size: 2.5rem;
     position: fixed;
     bottom: 0;
     right: 0;
     cursor: pointer;
     z-index: 1000;
-    background-color: rgb(236, 220, 220);
+    background-color: #a89184;
     border-radius: 10px;
     text-align: center;
 }
@@ -500,16 +496,25 @@ nav {
     ------------------------------------------------
 */
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 935px) {
+
+    .navbar-frame {
+        position: sticky;
+        top: 50px;
+        z-index: 10000;
+        background: #F5EBEB;
+    }
 
     nav {
         justify-content: start;
+        
     }
 
     .nav-list-ul{
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
+        width: 60%;
         height: 100vh;
         display: none;
         flex-direction: column;
@@ -519,11 +524,12 @@ nav {
         /* overflow-y: scroll; */
     }
 
-    .nav-list>li {
+    .nav-list > li {
         line-height: 6rem;
     }
 
     .sub-menu {
+        display: none;
         position: initial;
         border: 3px solid transparent;
         border-left-color: #eb3007;
@@ -564,6 +570,15 @@ nav {
 
     .menu {
         flex-wrap: wrap;
+        
+    }
+
+    .top-items {
+        width: 20%;
+    }
+
+    .go-link a {
+        font-size: 15px;
     }
 
     .category {
@@ -577,6 +592,7 @@ nav {
         
         .category {
             width: 75%;
+            
         }
     
         .top-items {
@@ -588,19 +604,34 @@ nav {
             text-align: center;
             background-color: rgb(255, 255, 255, 0.8);
             border-radius: 5px;
+            
         }
 
         .top-items a {
             font-size: 1.4rem;
             text-decoration: none;
         }
+
+        .langBut {
+            font-size: 1.4rem;
+        }
+
+        .go-link a {
+            font-size: 15px;
+        }
 }
 
 @media screen and (max-width: 1250px) {
     .sepet {
-        padding-top: 10px;
-        width: 100px;
-        height: 60px;
+        padding-top: 5px;
+        width: 50px;
+        height: 40px;
         font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .top-items {
+        width: 100px;
     }
 }
