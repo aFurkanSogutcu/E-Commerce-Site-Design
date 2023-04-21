@@ -335,6 +335,64 @@ nav {
 
 /*
     ------------------------------------------------
+*/      
+
+
+    
+.cityImg {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cityImg img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .image-overlay {
+    position: relative;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+  }
+
+  .overlay-text p {
+    color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    header {
+      padding: 40px;
+    }
+    
+    .cityImg {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+    }
+  
+    .cityImg p {
+      flex: 1;
+      margin-right: 50px;
+    }
+
+    .overlay-text {
+        padding: 40px;
+      }
+  }
+
+/*
+    ------------------------------------------------
 */
 
 .menu {
