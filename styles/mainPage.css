@@ -85,6 +85,7 @@ hr {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    z-index: 1000000;
 }
 
 .dropdown a:hover {
@@ -345,28 +346,32 @@ nav {
     padding: 20px;
   }
   
-  .cityImg img {
+.cityImg img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-  }
+    border-radius: 5%;
+}
 
-  .image-overlay {
+.image-overlay {
     position: relative;
-  }
-  
-  .overlay-text {
+}
+
+.overlay-text {
     position: absolute;
     top: 70%;
     left: 30%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(24, 22, 22, 0.6);
     padding: 20px;
-  }
+    border-radius: 5%;
+}
 
-  .overlay-text p {
-    color: #fff;
-  }
+.overlay-text p {
+    color: #E4D0D0;
+    font-family:monospace;
+    font-size: 11px
+}
 
   @media (min-width: 768px) {
     header {
@@ -379,6 +384,7 @@ nav {
       align-items: center;
       justify-content: space-between;
       padding: 40px;
+      
     }
   
     .cityImg p {
@@ -405,9 +411,11 @@ nav {
     width: 40%;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    /* background: linear-gradient(rgb(161, 132, 68,1),rgba(161, 132, 68,0.4)); */
-    background: #867070;
+    background: linear-gradient(rgba(161, 132, 68,0.4),rgb(167, 137, 137)); 
+    /*background: #867070;*/
     margin: 20px auto;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    
 }
 
 
