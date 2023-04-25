@@ -338,7 +338,45 @@ nav {
     ------------------------------------------------
 */      
 
+.menu-shopping {
+    max-width: 1200px;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .video-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  #show-code-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #code-wrapper {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #code-wrapper p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #code-wrapper span {
+    border-bottom: 2px solid #000;
+  }
 
+
+/*
+    ------------------------------------------------
+*/  
     
 .cityImg {
     max-width: 800px;

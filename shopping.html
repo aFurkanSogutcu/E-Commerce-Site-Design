@@ -13,13 +13,24 @@
 <body>
     <div class="frame"> 
         <div class="top-items">
-            <a class="login" href="login.html">Giriş
-                <i class="icon ion-md-person"></i>
-            </a>
-            <hr>
-            <a class="lang" href="#">Dil
-                <i class="icon ion-md-flag"></i>
-            </a>
+            <div class="login">
+                <a href="login.html">Giriş
+                    <i class="icon ion-md-person"></i>
+                </a>
+            </div>
+
+            <div class="lang">
+                <button class = "langBut">Dil <i class="icon ion-md-flag"></i></button>
+                <div class="dropdown">
+                    <a href="#">
+                        Tr
+                    </a>
+                    <br>
+                    <a href="#">
+                        Eng
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="top-view">
@@ -45,7 +56,7 @@
 
                     <div class="logo">
                         <a href="mainPage.html">
-                            <i class="icon ion-md-restaurant"></i>
+                            <i class="icon ion-md-bed"></i>
                         </a>
                     </div>
                     
@@ -55,10 +66,10 @@
                                 <a href="mainPage.html">Ana Sayfa</a>
                             </li>
                             <li>
-                                <a href="foods&drinks.html">Yiyecek ve İçecekler<i class="icon ion-md-arrow-dropdown"></i></a>
+                                <a href="foods&drinks.html">Yiyecek ve İçecekler</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="foodMenu.html">Yemek Menüleri<i class="icon ion-md-arrow-dropdown"></i></a>
+                                        <a href="foodMenu.html">Yemek Menüleri</a>
                                         <ul class="sub-menu">
                                             <li>
                                                 <a href="anaYemekler.html">Ana Yemekler</a>
@@ -72,9 +83,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="drinks.html">İçecekler
-                                            <i class="icon ion-md-arrow-dropdown"></i>
-                                        </a>
+                                        <a href="drinks.html">İçecekler</a>
                                         <ul class="sub-menu">
                                             <li>
                                                 <a href="hotDrinks.html">Sıcak İçecekler</a>
@@ -90,7 +99,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="roomService.html">Oda İşlemleri<i class="icon ion-md-arrow-dropdown"></i></a>
+                                <a href="roomService.html">Oda İşlemleri</a>
                                 <ul class="sub-menu">
                                     <li>
                                         <a href="roomCleaning.html">Oda Temizliği</a>
@@ -111,8 +120,17 @@
                 </nav>
             </div>
         </div>
-        <div class="menu">
-            
+
+        <div class="menu-shopping">
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+              </div>
+              
+              <button id="show-code-btn">Kodu Göster</button>
+              
+              <div id="code-wrapper">
+                <p>3 haneli kodunuz: <span id="code"></span></p>
+              </div>
         </div>
 
         <div class="sepet">
@@ -123,20 +141,56 @@
 
         <div class="footer">
             <div class="footer-content">
-                <h3>Sheraton Hotel</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum similique nam beatae deserunt labore iusto culpa omnis veniam</p>
+                <h3>Hakkımızda</h3>
+                <p>Fikir ile Gelecek / Intvice</p>
                 <ul class="socials">
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></i></a></li>
+                    <li><a href="https://fikirilegelecek.com"><i class="fa-solid fa-link"></i></i></a></li>
+                    <li><a href="https://www.facebook.com/FikirileGelecek/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/FikirileGelecek/"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/fikirilegelecek/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCMEYqEyiAdOpXEtoAF5Sg1w"><i class="fa-brands fa-youtube"></i></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/fikirilegelecek/"><i class="fa-brands fa-linkedin"></i></i></a></li>
                 </ul>
             </div>
             <div class="footer-bot">
-                <p>copyright &copy;2020 codeOpacity. designed by <span>Ahmet Furkan Söğütcü</span></p>
+                <p>designed by <span>Ahmet Furkan Söğütcü & Eren Bekmezci</span></p>
             </div>
         </div>
     </div> 
-<script src="script.js"></script>
+<script>
+
+let codeShown = false;
+      let code = '';
+
+      function generateCode() {
+        const randomCode = Math.floor(Math.random() * 900) + 100;
+        return "_" + randomCode + "_";
+      }
+
+      const showCodeBtn = document.getElementById("show-code-btn");
+      const codeWrapper = document.getElementById("code-wrapper");
+      const codeElem = document.getElementById("code");
+
+      showCodeBtn.addEventListener("click", function() {
+        if (!codeShown) {
+          code = generateCode();
+          codeElem.textContent = code;
+          codeWrapper.style.display = "block";
+          codeShown = true;
+        } else {
+          window.location.href = "mainPage.html"; // index.html yerine ana sayfanın URL'sini yazın
+        }
+      });
+
+      // Ana sayfaya yönlendirildiğinde kodu sıfırla
+      window.addEventListener("unload", function() {
+        if (codeShown) {
+          codeShown = false;
+          code = '';
+        }
+      });
+    </script>   
+
+</script>
 </body>
 </html>
