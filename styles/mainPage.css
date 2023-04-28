@@ -1,7 +1,8 @@
 *, *::before, *::after {
     padding: 0;
-    margin: 0;  
-    box-sizing: border-box; 
+    margin: 0;
+    box-sizing: border-box;
+    
 }
 
 hr {
@@ -159,6 +160,7 @@ hr {
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
+    background-color: #F5EBEB;
 }
 
 body {
@@ -339,7 +341,6 @@ nav {
 */      
 
 .menu-shopping {
-    max-width: 1200px;
     margin-top: 50px;
     text-align: center;
   }
@@ -348,7 +349,7 @@ nav {
     margin-bottom: 20px;
   }
   
-  #show-code-btn {
+  #showCode {
     background-color: #3498db;
     color: #fff;
     padding: 10px 20px;
@@ -373,6 +374,10 @@ nav {
     border-bottom: 2px solid #000;
   }
 
+  .iframe {
+      width: 489px;
+      height: 275px;
+  }
 
 /*
     ------------------------------------------------
@@ -441,7 +446,7 @@ nav {
 
 .menu {
     padding: 35px, 45px, 35px, 45px;
-    margin: 35px auto;
+    margin-top: 35px;
     width: 100%;
 }
 
@@ -526,7 +531,7 @@ nav {
     color: white;
     font-family: "Open Sans";
     padding-top: 40px;
-    
+    position: absolute;
 }
 
 .footer-content {
@@ -577,23 +582,22 @@ nav {
     color: aqua;
 }
 
-.footer-bottom { 
-    background: #000;
+.footer-bot { 
     width: 100vw;
     text-align: center;
 
 }
 
-.footer-bottom p {
+.footer-bot p {
     font-size: 14px;
     word-spacing: 2px;
     text-decoration: none;
 }
 
-.footer-bottom span {
+.footer-bot span {
     text-transform: uppercase;
     opacity: .4;
-    font-weight: 200;
+    font-weight: 10;
 }
 
 /*
@@ -688,6 +692,11 @@ nav {
     .category {
         width: 40%;
     }
+
+    .iframe {
+        width: 270px;
+        height: 150px;
+    }   
 }
 
 @media screen and (max-width: 700px) {
@@ -722,6 +731,24 @@ nav {
 
         .go-link a {
             font-size: 15px;
+        }
+
+        .footer-bot { 
+            width: 100vw;
+            text-align: center;
+        
+        }
+        
+        .footer-bot p {
+            font-size:9px;
+            word-spacing: 2px;
+            text-decoration: none;
+        }
+        
+        .footer-bot span {
+            text-transform: uppercase;
+            opacity: .4;
+            font-weight: 10;
         }
 }
 

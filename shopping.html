@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anasayfa</title>
+    <title>shopping</title>
     <link rel="stylesheet" href="styles/mainPage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    
+    <script type="module" src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="frame"> 
@@ -123,14 +127,14 @@
 
         <div class="menu-shopping">
             <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-              </div>
+                <iframe class="iframe" src="https://www.youtube.com/embed/7A1q7v4btbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
               
-              <button id="show-code-btn">Kodu Göster</button>
+            <button id="showCode">Kodu Göster</button>
               
-              <div id="code-wrapper">
+            <div id="code-wrapper">
                 <p>3 haneli kodunuz: <span id="code"></span></p>
-              </div>
+            </div>
         </div>
 
         <div class="sepet">
@@ -138,59 +142,23 @@
                 Sepet
             </i>
         </div>
-
-        <div class="footer">
-            <div class="footer-content">
-                <h3>Hakkımızda</h3>
-                <p>Fikir ile Gelecek / Intvice</p>
-                <ul class="socials">
-                    <li><a href="https://fikirilegelecek.com"><i class="fa-solid fa-link"></i></i></a></li>
-                    <li><a href="https://www.facebook.com/FikirileGelecek/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="https://twitter.com/FikirileGelecek/"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/fikirilegelecek/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCMEYqEyiAdOpXEtoAF5Sg1w"><i class="fa-brands fa-youtube"></i></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/fikirilegelecek/"><i class="fa-brands fa-linkedin"></i></i></a></li>
-                </ul>
-            </div>
-            <div class="footer-bot">
-                <p>designed by <span>Ahmet Furkan Söğütcü & Eren Bekmezci</span></p>
-            </div>
-        </div>
     </div> 
-<script>
-
-let codeShown = false;
-      let code = '';
-
-      function generateCode() {
-        const randomCode = Math.floor(Math.random() * 900) + 100;
-        return "_" + randomCode + "_";
-      }
-
-      const showCodeBtn = document.getElementById("show-code-btn");
-      const codeWrapper = document.getElementById("code-wrapper");
-      const codeElem = document.getElementById("code");
-
-      showCodeBtn.addEventListener("click", function() {
-        if (!codeShown) {
-          code = generateCode();
-          codeElem.textContent = code;
-          codeWrapper.style.display = "block";
-          codeShown = true;
-        } else {
-          window.location.href = "mainPage.html"; // index.html yerine ana sayfanın URL'sini yazın
-        }
-      });
-
-      // Ana sayfaya yönlendirildiğinde kodu sıfırla
-      window.addEventListener("unload", function() {
-        if (codeShown) {
-          codeShown = false;
-          code = '';
-        }
-      });
-    </script>   
-
-</script>
+    <div class="footer">
+        <div class="footer-content">
+            <h3>Hakkımızda</h3>
+            <p>Fikir ile Gelecek / Intvice</p>
+            <ul class="socials">
+                <li><a href="https://fikirilegelecek.com"><i class="fa-solid fa-link"></i></i></a></li>
+                <li><a href="https://www.facebook.com/FikirileGelecek/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/FikirileGelecek/"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/fikirilegelecek/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCMEYqEyiAdOpXEtoAF5Sg1w"><i class="fa-brands fa-youtube"></i></i></a></li>
+                <li><a href="https://www.linkedin.com/company/fikirilegelecek/"><i class="fa-brands fa-linkedin"></i></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bot">
+            <p>designed by <span>Ahmet Furkan Söğütcü & Eren Bekmezci</span></p>
+        </div>
+    </div>
 </body>
 </html>
